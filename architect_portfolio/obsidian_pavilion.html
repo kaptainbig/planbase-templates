@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<script src="theme-init.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#474747",
+                    "tertiary": "#3b3b3b",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#3c3b3b",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "on-background": "#1a1c1c",
+                    "surface-container-high": "#e8e8e8",
+                    "surface-tint": "#5e5e5e",
+                    "secondary-fixed-dim": "#adabaa",
+                    "on-primary-fixed": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "on-tertiary-container": "#ffffff",
+                    "tertiary-container": "#747474",
+                    "inverse-on-surface": "#f1f1f1",
+                    "on-primary-container": "#ffffff",
+                    "secondary-container": "#d6d4d3",
+                    "on-secondary-container": "#1b1c1c",
+                    "outline-variant": "#c6c6c6",
+                    "on-surface-variant": "#474747",
+                    "error-container": "#ffdad6",
+                    "surface": "#f9f9f9",
+                    "on-tertiary": "#e2e2e2",
+                    "outline": "#777777",
+                    "surface-container-highest": "#e2e2e2",
+                    "error": "#ba1a1a",
+                    "background": "#f9f9f9",
+                    "surface-container-low": "#f3f3f3",
+                    "surface-dim": "#dadada",
+                    "surface-container": "#eeeeee",
+                    "primary-container": "#3b3b3b",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#410002",
+                    "on-primary": "#e2e2e2",
+                    "surface-bright": "#f9f9f9",
+                    "tertiary-fixed": "#5e5e5e",
+                    "on-surface": "#1a1c1c",
+                    "inverse-primary": "#c6c6c6",
+                    "on-tertiary-fixed-variant": "#e2e2e2",
+                    "on-tertiary-fixed": "#ffffff",
+                    "inverse-surface": "#2f3131",
+                    "on-primary-fixed-variant": "#e2e2e2",
+                    "secondary-fixed": "#c8c6c5",
+                    "primary-fixed-dim": "#474747",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#5e5e5e",
+                    "secondary": "#5f5e5e",
+                    "primary": "#000000"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .font-serif {
+            font-family: 'Newsreader', serif;
+        }
+    </style>
+</head>
+<body class="dark:bg-black dark:text-white bg-surface text-on-surface dark:text-white antialiased overflow-x-hidden">
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-[100] bg-surface dark:bg-black translate-x-full transition-transform duration-500 ease-in-out md:hidden">
+    <div class="flex justify-between items-center px-8 py-6 border-b border-outline-variant/10">
+        <a href="index.html" class="text-lg font-bold tracking-tighter uppercase dark:text-white text-black manrope">MENU</a>
+        <button class="menu-close material-symbols-outlined text-black dark:text-white text-3xl">close</button>
+    </div>
+    <nav class="flex flex-col gap-8 p-12 items-center text-center">
+        <a class="text-2xl newsreader dark:text-white" href="index.html">Home</a>
+        <a class="text-2xl newsreader dark:text-white" href="projects.html">Projects</a>
+        <a class="text-2xl newsreader dark:text-white" href="about.html">About</a>
+        <a class="text-2xl newsreader dark:text-white" href="about.html">Contact</a>
+        <div class="mt-12">
+            <button class="theme-toggle material-symbols-outlined text-black dark:text-white text-4xl">contrast</button>
+        </div>
+    </nav>
+</div>
+
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-neutral-50/90 dark:bg-neutral-900/90 backdrop-blur-xl flex justify-between items-center w-full px-8 py-6 md:px-16">
+<a href="index.html" class="text-2xl font-serif tracking-tighter text-black dark:text-white uppercase">STUDIO</a>
+<div class="hidden md:flex gap-12">
+<a class="manrope text-[12px] uppercase tracking-widest text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300" href="index.html">Home</a>
+<a class="manrope text-[12px] uppercase tracking-widest text-black dark:text-white border-b-2 border-black dark:border-white pb-1 transition-colors duration-300" href="projects.html">Projects</a>
+<a class="manrope text-[12px] uppercase tracking-widest text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300" href="about.html">About</a>
+<a class="manrope text-[12px] uppercase tracking-widest text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300" href="about.html">Contact</a>
+</div>
+<div class="flex items-center">
+<button class="theme-toggle material-symbols-outlined text-black dark:text-white hover:opacity-70 transition-opacity mr-4">contrast</button>
+<span class="material-symbols-outlined text-black dark:text-white" class="menu-toggle cursor-pointer dark:text-white" data-icon="menu">menu</span>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full h-screen flex flex-col justify-end px-8 md:px-16 pb-24 bg-surface">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<img alt="The Monolith Project" class="w-full h-full object-cover grayscale brightness-50" data-alt="monolithic concrete skyscraper with sharp geometric angles against a moody overcast grey sky, high contrast architectural photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLwCN-ijSbINUeIQysQEM9Jv_EOU-_JN2Qqh_4exz1gShA17spn7cg5iPDvtGjr3HFwiwCnWleT_cah4lzfWq504l7I_q4PpId-m-nJENi01agMQikzDrNpUmoDA5ZyOLM0m-yIIbkTY0JlJAYjLrCiPymyeQiXcg7ILWJ73_UOIQIPASq4V_6jUm1TMq-h3K2_f7_oKGOnCXPx8FrTGPmqTFeJp0CwRNpnnmTX0Y9KfwVbx0uI8cW_q4kyCaH1-EJTmr_ieGp66U"/>
+</div>
+<div class="relative z-10 max-w-4xl">
+<p class="font-label text-[10px] uppercase tracking-[0.3em] text-on-primary mb-4 opacity-80">Case Study 04 / 2024</p>
+<h1 class="font-serif italic text-6xl md:text-9xl text-white tracking-tighter leading-none mb-8">The Silent Structure</h1>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 border-t border-white/20 pt-8">
+<div>
+<span class="block font-label text-[10px] uppercase tracking-widest text-white/50 mb-2">Location</span>
+<span class="block text-white text-sm">Reykjavík, Iceland</span>
+</div>
+<div>
+<span class="block font-label text-[10px] uppercase tracking-widest text-white/50 mb-2">Scale</span>
+<span class="block text-white text-sm">4,200 SQM / Cultural Center</span>
+</div>
+<div>
+<span class="block font-label text-[10px] uppercase tracking-widest text-white/50 mb-2">Phase</span>
+<span class="block text-white text-sm">Completed Dec 2023</span>
+</div>
+</div>
+</div>
+</header>
+<main class="relative">
+<!-- Narrative/Concept -->
+<section class="py-32 px-8 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-12 bg-surface">
+<div class="md:col-span-5">
+<h2 class="font-serif italic text-4xl md:text-5xl text-primary dark:text-white leading-tight sticky top-32">A dialogue between mass and nothingness.</h2>
+</div>
+<div class="md:col-start-7 md:col-span-5 space-y-8">
+<p class="text-secondary dark:text-neutral-400 text-lg leading-relaxed">
+                    Designed as a sanctuary for silence, The Silent Structure emerges from the volcanic landscape of Iceland not as an intrusion, but as an extension of the earth’s own tectonic narrative. The architecture explores the concept of 'The Void'—treating empty space as a tangible material.
+                </p>
+<p class="text-secondary dark:text-neutral-400 text-lg leading-relaxed">
+                    By utilizing heavy, light-absorbing surfaces, we've created a series of chambers that manipulate acoustics and natural light to evoke a sense of permanence and introspection. The building does not shout; it hums with the frequency of the surrounding tundra.
+                </p>
+<div class="pt-8">
+<button class="bg-primary text-on-primary px-10 py-5 text-[10px] uppercase tracking-[0.2em] font-label hover:opacity-90 transition-opacity">
+                        View Project Archive
+                    </button>
+</div>
+</div>
+</section>
+<!-- High Contrast Imagery -->
+<section class="w-full bg-surface-container dark:bg-neutral-800-high">
+<div class="grid grid-cols-1 md:grid-cols-2">
+<div class="h-[600px] overflow-hidden">
+<img alt="Architectural Detail" class="w-full h-full object-cover grayscale" data-alt="stark white architectural corner meeting dark shadow, extreme minimalist composition, sharp lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNRmHh-K1bFXsqX887pHiI3rBsBRerWEFj4BcHl8Exs8aq_qPoiypALVsyIbDNjEhW9E8XZq3cEStQMppuxqLmXSpgERmYeYeDm16RkrBlsWtOGmtCMmnYTP1z5ILDdFMz-RazgOT8aAmnx-QEUU5a1TshnusIHFY5d5ZtYz6Ki3jKgToKKEL3R_e2y1wlWs8CGhSupuLtSt7kgPGpuCRa_RXMdYnjc3_cueo3NuGvLQpmRDWKOgJR-mQFvl0PM8CmS_tBjrTeypQ"/>
+</div>
+<div class="flex items-center justify-center p-12 md:p-24 bg-primary text-on-primary">
+<div class="max-w-md">
+<span class="material-symbols-outlined text-4xl mb-6" data-icon="light_mode">light_mode</span>
+<h3 class="font-serif italic text-3xl mb-6">Chiaroscuro in Concrete</h3>
+<p class="text-white/70 text-sm leading-loose">
+                            The passage of time is measured by the movement of light across the raw concrete surfaces. Each aperture is calculated to capture specific celestial alignments during the winter solstice.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Drawings Section -->
+<section class="py-32 bg-surface-container dark:bg-neutral-800">
+<div class="px-8 md:px-16 mb-16">
+<h2 class="font-serif text-3xl uppercase tracking-tighter text-primary dark:text-white">Technical Blueprint</h2>
+<div class="h-px w-24 bg-primary mt-4"></div>
+</div>
+<div class="px-8 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<div class="md:col-span-8 bg-surface p-12 shadow-sm">
+<img alt="Technical Floor Plan" class="w-full opacity-20 contrast-150 mix-blend-multiply grayscale" data-alt="abstract architectural blueprint with fine white lines on a black background, technical floor plan of a complex building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfrj5m3Zluuuele_J6dNtwfSpnctzdE_6PYYTkeW2HyVP6MTG2zy1B1VQmxk0nQaD037X-J2m598k9uuQID82PlNsG9HNkucGmUiSVJll-GyY-pci9YnRapEgVQFSVz2fEBrBbk9lsm0ml7GQXnDT06D7aJobq43G5iU4FP1S1RePpKKe5vXhx1U8C45nx_kk_ax_N4S86Ghb45i0QSpdu_0cqgXfIKscoHgkRKliR589E_WncVgKX-fXhYVwYfpnbsT7XOPvGeTw"/>
+</div>
+<div class="md:col-span-4 space-y-6">
+<div class="border-l border-primary/20 pl-6 py-2">
+<h4 class="font-label text-[11px] uppercase tracking-widest text-primary dark:text-white font-bold">Section A-A</h4>
+<p class="text-secondary dark:text-neutral-400 text-xs mt-2">Vertical circulation core showing subterranean gallery levels and daylight shafts.</p>
+</div>
+<div class="border-l border-primary/20 pl-6 py-2">
+<h4 class="font-label text-[11px] uppercase tracking-widest text-primary dark:text-white font-bold">Spatial Logic</h4>
+<p class="text-secondary dark:text-neutral-400 text-xs mt-2">The layout follows a non-linear path, encouraging wandering and discovery.</p>
+</div>
+<div class="border-l border-primary/20 pl-6 py-2">
+<h4 class="font-label text-[11px] uppercase tracking-widest text-primary dark:text-white font-bold">Structural Load</h4>
+<p class="text-secondary dark:text-neutral-400 text-xs mt-2">Cantilevered spans up to 18 meters without visible support columns.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Materiality Grid -->
+<section class="py-32 px-8 md:px-16 bg-surface">
+<div class="max-w-2xl mb-24">
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-secondary dark:text-neutral-400 mb-4 block">The Material Palette</span>
+<h2 class="font-serif italic text-5xl text-primary dark:text-white">The texture of permanence.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-outline-variant/20">
+<!-- Material 01 -->
+<div class="bg-surface-container dark:bg-neutral-800-low dark:bg-neutral-900est p-12 group">
+<div class="w-full aspect-square bg-surface mb-8 overflow-hidden">
+<img alt="Raw Concrete" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-110" data-alt="extreme close up of weathered raw concrete texture with small pits and imperfections, neutral grey tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkbpBXNsaDWLEMlsnW1FHiIBxYO8ZarQd-HQStZ764mIlFJgaEO1Ziad5qhuGx3z3zdx8BaS9nOoLCb7UfKtwFE_lcteLGxVXt96cxvEHBHkWao4z01S-f-fVvi-7tByPTVDi_SyGsCdOZVL68gz97ihLA3FoaZayPKV0wgwRHtVbl15_hR4OgR5gI3aDWmH5uBImrTxY0zs6SR4X-3y_8MgoxgcPre3NM2oysJvDiMz-ssyaH-W9v9jq4Rfe3sLUv_JJoITfOskA"/>
+</div>
+<h4 class="font-serif text-xl mb-4">01. Raw Concrete</h4>
+<p class="text-secondary dark:text-neutral-400 text-sm leading-relaxed">
+                        Cast-on-site using local volcanic aggregates, the concrete retains the fingerprint of the environment.
+                    </p>
+</div>
+<!-- Material 02 -->
+<div class="bg-surface-container dark:bg-neutral-800-low dark:bg-neutral-900est p-12 group">
+<div class="w-full aspect-square bg-surface mb-8 overflow-hidden">
+<img alt="Charred Wood" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-110" data-alt="close-up of charred wood texture with deep black fissures and a slight oily sheen, architectural Shou Sugi Ban" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkuzIXKrAxGrhpF6-iPBYTKhKEHGMLtHMVKjN8hr4s_N-MQBxl9HXarc1NYQtBqFhw12hDfU_OOEo-S5Zf4oqbqEcYrqoYVqBMCHThW-dXS0xHTfhCVDsecI3-DkqJXnebE86X9sSKjHO_68vngOm9GL5HQhlVzpcrS7DH74z1M2kY969IPrX5w4wxniOlb27BXlL89petTXlKlKqmRBhTpYyB2x3WyYzAklRi719qsNcudu8dZhBojEax042LDal8CpggxWGpN2I"/>
+</div>
+<h4 class="font-serif text-xl mb-4">02. Charred Wood</h4>
+<p class="text-secondary dark:text-neutral-400 text-sm leading-relaxed">
+                        Traditional Japanese Yakisugi method used on Cedar panels to provide natural fire resistance and deep tonal contrast.
+                    </p>
+</div>
+<!-- Material 03 -->
+<div class="bg-surface-container dark:bg-neutral-800-low dark:bg-neutral-900est p-12 group">
+<div class="w-full aspect-square bg-surface mb-8 overflow-hidden">
+<img alt="Cold-Pressed Steel" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-110" data-alt="brushed dark steel surface with subtle metallic reflections and industrial finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk68ts0b2HGs-gOVISuCVJoWhCGKUwpL9ZuGlvjgiuyaQFVra3xfaITOp0Y-_7maLAnrg7rCqU_ILC0gqjhR-RK_myMLjcxY54SNj5LSocAG8INtV2_1plR4RHSGFpK0I7zukEOrD3vqmSMYElNLe6zraBp83vY_R-dLYTIe1NQi1l1Zuvo3b37ba2a76m8D28RbsqR-WrXhLW-vtv9oGJmAJmiL66yvud5RouUmhiiAEnnBOZpeD6dXIp6xXA3YxRYzHZqKBIpRg"/>
+</div>
+<h4 class="font-serif text-xl mb-4">03. Cold-Pressed Steel</h4>
+<p class="text-secondary dark:text-neutral-400 text-sm leading-relaxed">
+                        Untreated steel fixtures that will oxidize over decades, documenting the building's age through color shift.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Environmental Impact -->
+<section class="bg-primary py-32 px-8 md:px-16 text-on-primary">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="order-2 md:order-1">
+<div class="grid grid-cols-2 gap-12">
+<div class="space-y-2">
+<span class="font-serif italic text-4xl">94%</span>
+<p class="font-label text-[10px] uppercase tracking-widest text-white/50">Thermal Efficiency</p>
+</div>
+<div class="space-y-2">
+<span class="font-serif italic text-4xl">0.0</span>
+<p class="font-label text-[10px] uppercase tracking-widest text-white/50">Net Carbon Emissions</p>
+</div>
+<div class="space-y-2">
+<span class="font-serif italic text-4xl">100%</span>
+<p class="font-label text-[10px] uppercase tracking-widest text-white/50">Geothermal Power</p>
+</div>
+<div class="space-y-2">
+<span class="font-serif italic text-4xl">Recycled</span>
+<p class="font-label text-[10px] uppercase tracking-widest text-white/50">Water Systems</p>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-white/50 mb-6 block">Environmental Ethics</span>
+<h2 class="font-serif text-5xl md:text-6xl italic leading-tight mb-8">Architecture as a living ecosystem.</h2>
+<p class="text-white/70 text-lg leading-relaxed">
+                        The structure utilizes subterranean thermal mass to maintain constant temperatures without active cooling or heating. Rainwater is harvested through the central void, filtered through volcanic stone, and recirculated within the building's gray water systems.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Full-width Visual Closure -->
+<section class="h-screen w-full relative overflow-hidden bg-black">
+<img alt="Final Perspective" class="w-full h-full object-cover opacity-60 grayscale" data-alt="wide landscape of a misty rocky terrain at dusk with a single sharp architectural light in the distance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKUOrFffWz62VZn6NtWMWieo2TXI1PXdWXLwOYfgO_oxdbVdSPW8nzYqlQUt8Hxamy3jSYguRP7acRVWCwwRyt9N0YdZeabS9Id1u4vUvLt4E4BRy7kv9ZjOfZ3JfLRjEC85AeXULfeDWmP9yPtH0in-118q80_73OrM-u6y9Ntj9WgvTCMSYpLilEzvZ2_4zCMo-ST673KohBfkaniLuA0SLZXgzKdicxhkPvgAUGeBFekjMKqVQFevcp66cJMbLBC1x64ZTx9Ak"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center">
+<h2 class="font-serif italic text-5xl md:text-7xl text-white mb-4">The end of the path.</h2>
+<p class="font-label text-[10px] uppercase tracking-[0.5em] text-white/50">Project Complete 2024</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-100 dark:bg-neutral-950 flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 md:px-16 border-t-0">
+<div class="text-lg font-serif text-black dark:text-white uppercase mb-8 md:mb-0">STUDIO / MONOLITH</div>
+<div class="flex gap-8 mb-8 md:mb-0">
+<a class="body-sm manrope text-neutral-600 dark:text-neutral-400 opacity-80 hover:opacity-100 transition-opacity" href="about.html">Privacy Policy</a>
+<a class="body-sm manrope text-neutral-600 dark:text-neutral-400 opacity-80 hover:opacity-100 transition-opacity" href="about.html">Terms of Service</a>
+<a class="body-sm manrope text-neutral-600 dark:text-neutral-400 opacity-80 hover:opacity-100 transition-opacity" href="about.html">Press Kit</a>
+</div>
+<div class="body-sm manrope text-neutral-600 dark:text-neutral-400">
+            © 2024 Architectural Monolith. All Rights Reserved.
+        </div>
+</footer>
+<script src="theme-toggle.js"></script>
+<script src="mobile-menu.js"></script>
+</body></html>

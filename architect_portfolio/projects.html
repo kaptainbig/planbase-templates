@@ -86,6 +86,23 @@
     </style>
 </head>
 <body class="bg-surface text-on-surface dark:text-white font-body selection:bg-primary selection:text-on-primary">
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-[100] bg-surface dark:bg-black translate-x-full transition-transform duration-500 ease-in-out md:hidden">
+    <div class="flex justify-between items-center px-8 py-6 border-b border-outline-variant/10">
+        <a href="index.html" class="text-lg font-bold tracking-tighter uppercase dark:text-white text-black manrope">MENU</a>
+        <button class="menu-close material-symbols-outlined text-black dark:text-white text-3xl">close</button>
+    </div>
+    <nav class="flex flex-col gap-8 p-12 items-center text-center">
+        <a class="text-2xl newsreader dark:text-white" href="index.html">Home</a>
+        <a class="text-2xl newsreader dark:text-white" href="projects.html">Projects</a>
+        <a class="text-2xl newsreader dark:text-white" href="about.html">About</a>
+        <a class="text-2xl newsreader dark:text-white" href="about.html">Contact</a>
+        <div class="mt-12">
+            <button class="theme-toggle material-symbols-outlined text-black dark:text-white text-4xl">contrast</button>
+        </div>
+    </nav>
+</div>
+
 <!-- TopNavBar Component -->
 <nav class="fixed top-0 w-full z-50 h-20 bg-surface/90 dark:bg-black/80 backdrop-blur-xl flex justify-between items-center px-12 md:px-24">
 <div class="text-lg font-bold tracking-tighter uppercase dark:text-white text-black dark:text-white">ARCHITECTS MONOLITH</div>
@@ -96,6 +113,7 @@
 <a class="text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300" href="about.html">Contact</a>
 </div>
 <div class="flex items-center gap-6">
+<button class="menu-toggle md:hidden material-symbols-outlined text-black dark:text-white">menu</button>
 <button class="theme-toggle material-symbols-outlined text-black dark:text-white hover:opacity-70 transition-opacity scale-105 transition-transform duration-500">contrast</button>
 <button class="md:hidden material-symbols-outlined text-black dark:text-white">menu</button>
 </div>
@@ -125,7 +143,7 @@
 <div class="flex justify-between items-baseline">
 <div>
 <p class="font-label text-[0.7rem] uppercase tracking-[0.2em] text-secondary dark:text-neutral-400 mb-2">Commercial / 2023</p>
-<h3 class="text-3xl font-headline font-medium tracking-tight">The Obsidian Tower</h3>
+<a href="obsidian_pavilion.html"><h3 class="text-3xl font-headline font-medium tracking-tight">The Obsidian Tower</h3></a>
 </div>
 <span class="material-symbols-outlined text-secondary dark:text-neutral-400 group-hover:text-primary dark:text-white transition-colors">arrow_outward</span>
 </div>
@@ -195,4 +213,5 @@
 </div>
 </footer>
 <script src="theme-toggle.js"></script>
+<script src="mobile-menu.js"></script>
 </body></html>

@@ -95,16 +95,34 @@
     </style>
 </head>
 <body class="dark:bg-black dark:text-white bg-surface selection:bg-primary selection:text-on-primary">
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-[100] bg-surface dark:bg-black translate-x-full transition-transform duration-500 ease-in-out md:hidden">
+    <div class="flex justify-between items-center px-8 py-6 border-b border-outline-variant/10">
+        <a href="index.html" class="text-lg font-bold tracking-tighter uppercase dark:text-white text-black manrope">MENU</a>
+        <button class="menu-close material-symbols-outlined text-black dark:text-white text-3xl">close</button>
+    </div>
+    <nav class="flex flex-col gap-8 p-12 items-center text-center">
+        <a class="text-2xl newsreader dark:text-white" href="index.html">Home</a>
+        <a class="text-2xl newsreader dark:text-white" href="projects.html">Projects</a>
+        <a class="text-2xl newsreader dark:text-white" href="about.html">About</a>
+        <a class="text-2xl newsreader dark:text-white" href="about.html">Contact</a>
+        <div class="mt-12">
+            <button class="theme-toggle material-symbols-outlined text-black dark:text-white text-4xl">contrast</button>
+        </div>
+    </nav>
+</div>
+
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 h-20 bg-[#f9f9f9]/90 dark:bg-black/80 backdrop-blur-xl flex justify-between items-center px-12 md:px-24">
-<div class="text-lg font-bold tracking-tighter uppercase dark:text-white text-black">ARCHITECTS MONOLITH</div>
+<a href="index.html" class="text-lg font-bold tracking-tighter uppercase dark:text-white text-black">ARCHITECTS MONOLITH</div>
 <div class="hidden md:flex items-center gap-12">
 <a class="text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300 font-serif font-medium tracking-tight newsreader" href="index.html">Home</a>
 <a class="text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300 font-serif font-medium tracking-tight newsreader" href="projects.html">Projects</a>
 <a class="text-black dark:text-white border-b-2 border-black dark:border-white pb-1 font-serif font-medium tracking-tight newsreader text-black dark:text-white border-b-2 border-black dark:border-white pb-1" href="about.html">About</a>
 <a class="text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300 font-serif font-medium tracking-tight newsreader" href="about.html">Contact</a>
 </div>
-<div class="flex items-center">
+<div class="flex items-center gap-4">
+<button class="menu-toggle md:hidden material-symbols-outlined text-black dark:text-white">menu</button>
 <button class="hover:opacity-70 transition-opacity">
 <span class="material-symbols-outlined text-black">contrast</span>
 </button>
@@ -236,4 +254,5 @@
 </div>
 </footer>
 <script src="theme-toggle.js"></script>
+<script src="mobile-menu.js"></script>
 </body></html>

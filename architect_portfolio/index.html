@@ -86,9 +86,26 @@
     </style>
 </head>
 <body class="dark:bg-black dark:text-white bg-surface text-on-surface dark:text-white ">
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-[100] bg-surface dark:bg-black translate-x-full transition-transform duration-500 ease-in-out md:hidden">
+    <div class="flex justify-between items-center px-8 py-6 border-b border-outline-variant/10">
+        <a href="index.html" class="text-lg font-bold tracking-tighter uppercase dark:text-white text-black manrope">MENU</a>
+        <button class="menu-close material-symbols-outlined text-black dark:text-white text-3xl">close</button>
+    </div>
+    <nav class="flex flex-col gap-8 p-12 items-center text-center">
+        <a class="text-2xl newsreader dark:text-white" href="index.html">Home</a>
+        <a class="text-2xl newsreader dark:text-white" href="projects.html">Projects</a>
+        <a class="text-2xl newsreader dark:text-white" href="about.html">About</a>
+        <a class="text-2xl newsreader dark:text-white" href="about.html">Contact</a>
+        <div class="mt-12">
+            <button class="theme-toggle material-symbols-outlined text-black dark:text-white text-4xl">contrast</button>
+        </div>
+    </nav>
+</div>
+
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 h-20 bg-[#f9f9f9]/90 dark:bg-black/80 backdrop-blur-xl flex justify-between items-center px-8 md:px-24">
-<div class="text-lg font-bold tracking-tighter uppercase dark:text-white text-black manrope">ARCHITECTS MONOLITH</div>
+<a href="index.html" class="text-lg font-bold tracking-tighter uppercase dark:text-white text-black manrope">ARCHITECTS MONOLITH</a>
 <div class="hidden md:flex gap-12 items-center">
 <a class="text-black dark:text-white border-b-2 border-black dark:border-white pb-1 font-serif font-medium tracking-tight newsreader text-sm" href="index.html">Home</a>
 <a class="text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300 font-serif font-medium tracking-tight newsreader text-sm" href="projects.html">Projects</a>
@@ -99,8 +116,8 @@
 <button class="hover:opacity-70 transition-opacity flex items-center gap-2">
 <span class="theme-toggle material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity" data-icon="contrast">contrast</span>
 </button>
-<button class="md:hidden">
-<span class="material-symbols-outlined dark:text-white" data-icon="menu">menu</span>
+<button class="menu-toggle md:hidden">
+<span class="material-symbols-outlined dark:text-white" class="menu-toggle cursor-pointer dark:text-white" data-icon="menu">menu</span>
 </button>
 </div>
 </nav>
@@ -155,7 +172,7 @@
 <span class="text-xs manrope uppercase tracking-[0.4em] text-outline dark:text-neutral-500 dark:text-neutral-500 mb-4 block">Archives</span>
 <h2 class="newsreader text-5xl font-medium">Selected Works</h2>
 </div>
-<a class="label-md uppercase text-[0.7rem] tracking-widest manrope border-b-2 border-primary pb-1 hover:opacity-50 transition-opacity" href="#">Explore All</a>
+<a class="label-md uppercase text-[0.7rem] tracking-widest manrope border-b-2 border-primary pb-1 hover:opacity-50 transition-opacity" href="projects.html">Explore All</a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
 <!-- Large Featured Item -->
@@ -166,7 +183,7 @@
 </div>
 <div class="mt-6 flex justify-between items-start">
 <div>
-<h3 class="newsreader text-2xl">The Concrete Pavilion</h3>
+<a href="obsidian_pavilion.html"><h3 class="newsreader text-2xl">The Concrete Pavilion</h3></a>
 <p class="text-xs manrope uppercase tracking-widest text-outline dark:text-neutral-500 dark:text-neutral-500 mt-1">Stuttgart, Germany / 2023</p>
 </div>
 <span class="material-symbols-outlined text-outline dark:text-neutral-500 dark:text-neutral-500 group-hover:text-primary dark:text-white transition-colors" data-icon="north_east">north_east</span>
@@ -239,11 +256,12 @@
             © 2024 Architectural Monolith. Built for Permanence.
         </div>
 <div class="flex gap-12">
-<a class="font-sans text-[0.75rem] uppercase tracking-widest manrope text-neutral-400 hover:text-white transition-colors underline underline-offset-4" href="#">Instagram</a>
-<a class="font-sans text-[0.75rem] uppercase tracking-widest manrope text-neutral-400 hover:text-white transition-colors" href="#">LinkedIn</a>
-<a class="font-sans text-[0.75rem] uppercase tracking-widest manrope text-neutral-400 hover:text-white transition-colors" href="#">Journal</a>
-<a class="font-sans text-[0.75rem] uppercase tracking-widest manrope text-neutral-400 hover:text-white transition-colors" href="#">Privacy</a>
+<a class="font-sans text-[0.75rem] uppercase tracking-widest manrope text-neutral-400 hover:text-white transition-colors underline underline-offset-4" href="projects.html">Instagram</a>
+<a class="font-sans text-[0.75rem] uppercase tracking-widest manrope text-neutral-400 hover:text-white transition-colors" href="projects.html">LinkedIn</a>
+<a class="font-sans text-[0.75rem] uppercase tracking-widest manrope text-neutral-400 hover:text-white transition-colors" href="projects.html">Journal</a>
+<a class="font-sans text-[0.75rem] uppercase tracking-widest manrope text-neutral-400 hover:text-white transition-colors" href="projects.html">Privacy</a>
 </div>
 </footer>
 <script src="theme-toggle.js"></script>
+<script src="mobile-menu.js"></script>
 </body></html>
