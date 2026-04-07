@@ -85,28 +85,28 @@
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
     </style>
 </head>
-<body class="bg-surface text-on-surface dark:text-white dark:bg-black dark:text-white">
+<body class="dark:bg-black dark:text-white bg-surface text-on-surface dark:text-white ">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 h-20 bg-[#f9f9f9]/90 dark:bg-black/80 backdrop-blur-xl flex justify-between items-center px-4 md:px-24">
-<div class="text-lg font-bold tracking-tighter uppercase text-black dark:text-white manrope">ARCHITECTS MONOLITH</div>
+<nav class="fixed top-0 w-full z-50 h-20 bg-[#f9f9f9]/90 dark:bg-black/80 backdrop-blur-xl flex justify-between items-center px-8 md:px-24">
+<div class="text-lg font-bold tracking-tighter uppercase dark:text-white text-black manrope">ARCHITECTS MONOLITH</div>
 <div class="hidden md:flex gap-12 items-center">
-<a class="text-black border-b-2 border-black pb-1 font-serif font-medium tracking-tight newsreader text-sm" href="index.html" class="dark:text-white dark:border-white">Home</a>
-<a class="text-neutral-500 hover:text-black transition-colors duration-300 font-serif font-medium tracking-tight newsreader text-sm" href="projects.html" class="dark:text-neutral-400 dark:hover:text-white">Projects</a>
-<a class="text-neutral-500 hover:text-black transition-colors duration-300 font-serif font-medium tracking-tight newsreader text-sm" href="about.html" class="dark:text-neutral-400 dark:hover:text-white">About</a>
-<a class="text-neutral-500 hover:text-black transition-colors duration-300 font-serif font-medium tracking-tight newsreader text-sm" href="about.html" class="dark:text-neutral-400 dark:hover:text-white">Contact</a>
+<a class="text-black dark:text-white border-b-2 border-black dark:border-white pb-1 font-serif font-medium tracking-tight newsreader text-sm" href="index.html">Home</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300 font-serif font-medium tracking-tight newsreader text-sm" href="projects.html">Projects</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300 font-serif font-medium tracking-tight newsreader text-sm" href="about.html">About</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300 font-serif font-medium tracking-tight newsreader text-sm" href="about.html">Contact</a>
 </div>
 <div class="flex items-center gap-6">
 <button class="hover:opacity-70 transition-opacity flex items-center gap-2">
-<button id="theme-toggle" class="material-symbols-outlined text-black dark:text-white hover:opacity-70 transition-opacity">contrast</button>
+<span class="theme-toggle material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity" data-icon="contrast">contrast</span>
 </button>
 <button class="md:hidden">
-<span class="material-symbols-outlined" data-icon="menu">menu</span>
+<span class="material-symbols-outlined dark:text-white" data-icon="menu">menu</span>
 </button>
 </div>
 </nav>
 <main class="pt-20">
 <!-- Hero Section -->
-<section class="relative w-full h-auto md:h-[921px] min-h-screen flex items-center px-4 md:px-24 overflow-hidden">
+<section class="relative w-full h-auto md:h-[921px] py-20 md:py-0 flex items-center px-8 md:px-24 overflow-hidden">
 <div class="grid grid-cols-1 md:grid-cols-12 w-full gap-8 items-center z-10">
 <div class="md:col-span-7">
 <h1 class="display-lg text-6xl md:text-8xl newsreader font-medium leading-[0.9] tracking-tighter text-primary dark:text-white mb-8">
@@ -126,10 +126,10 @@
 </div>
 </section>
 <!-- Professional Statement / Philosophies -->
-<section class="py-32 px-4 md:px-24 bg-surface-container-low dark:bg-neutral-900">
+<section class="py-32 px-8 md:px-24 bg-surface-container dark:bg-neutral-800 dark:bg-neutral-800-low dark:bg-neutral-900">
 <div class="max-w-4xl">
-<span class="text-xs manrope uppercase tracking-[0.4em] text-outline mb-6 block">Philosophy</span>
-<h2 class="newsreader text-4xl md:text-5xl font-light leading-snug text-on-surface dark:text-white">
+<span class="text-xs manrope uppercase tracking-[0.4em] text-outline dark:text-neutral-500 dark:text-neutral-500 mb-6 block">Philosophy</span>
+<h2 class="newsreader text-4xl md:text-5xl font-light leading-snug text-on-surface dark:text-white ">
                     "Architecture is not a container for content; it is the dialogue between material and light. We move beyond templates to find the soul of the site."
                 </h2>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mt-24">
@@ -149,13 +149,13 @@
 </div>
 </section>
 <!-- Featured Work - Bento / Asymmetric Grid -->
-<section class="py-32 px-4 md:px-24">
+<section class="py-32 px-8 md:px-24">
 <div class="flex justify-between items-end mb-16">
 <div>
-<span class="text-xs manrope uppercase tracking-[0.4em] text-outline mb-4 block">Archives</span>
+<span class="text-xs manrope uppercase tracking-[0.4em] text-outline dark:text-neutral-500 dark:text-neutral-500 mb-4 block">Archives</span>
 <h2 class="newsreader text-5xl font-medium">Selected Works</h2>
 </div>
-<a class="label-md uppercase text-[0.7rem] tracking-widest manrope border-b-2 border-primary pb-1 hover:opacity-50 transition-opacity" href="projects.html">Explore All</a>
+<a class="label-md uppercase text-[0.7rem] tracking-widest manrope border-b-2 border-primary pb-1 hover:opacity-50 transition-opacity" href="#">Explore All</a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
 <!-- Large Featured Item -->
@@ -167,9 +167,9 @@
 <div class="mt-6 flex justify-between items-start">
 <div>
 <h3 class="newsreader text-2xl">The Concrete Pavilion</h3>
-<p class="text-xs manrope uppercase tracking-widest text-outline mt-1">Stuttgart, Germany / 2023</p>
+<p class="text-xs manrope uppercase tracking-widest text-outline dark:text-neutral-500 dark:text-neutral-500 mt-1">Stuttgart, Germany / 2023</p>
 </div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="north_east">north_east</span>
+<span class="material-symbols-outlined text-outline dark:text-neutral-500 dark:text-neutral-500 group-hover:text-primary dark:text-white transition-colors" data-icon="north_east">north_east</span>
 </div>
 </div>
 <!-- Smaller Item 1 -->
@@ -179,17 +179,17 @@
 </div>
 <div class="mt-6">
 <h3 class="newsreader text-2xl">Vellum Residence</h3>
-<p class="text-xs manrope uppercase tracking-widest text-outline mt-1">Kyoto, Japan / 2022</p>
+<p class="text-xs manrope uppercase tracking-widest text-outline dark:text-neutral-500 dark:text-neutral-500 mt-1">Kyoto, Japan / 2022</p>
 </div>
 </div>
 <!-- Smaller Item 2 - Floating Grid Shift -->
 <div class="md:col-span-4 group cursor-pointer md:-mt-24">
-<div class="relative overflow-hidden aspect-[1/1] bg-surface-container">
+<div class="relative overflow-hidden aspect-[1/1] bg-surface-container dark:bg-neutral-800 dark:bg-neutral-800">
 <img alt="Monolith Office" class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700" data-alt="interior view of a vast empty modern office with glass walls and heavy structural columns, atmospheric black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbJeB5wV4mnwrx9S1-vm7ipDfO1AzmkkvurMrz9dJto1ny5z4ifyrilWB2Z6Zp1L_GIfnwCpO_UY9ZVq7qF8L3FfhLnu9vPIWOf_-CzSJmR1Sp1VzM2fUJMDhmzTGnfyaYmTdiWUj0VRU6Xxh-8H4rnyXxRaN9QfbklmvAztT8xpt3nRik_i9JIEvktlXVHA4AkVA1e2DHqI7lIwUcS4cwLEzlZrZfDVOKtfnWmYKjajVoTQP-TffSB6h10u20oFbQqbAqU2k1ukU"/>
 </div>
 <div class="mt-6">
 <h3 class="newsreader text-2xl">Monolith Workspace</h3>
-<p class="text-xs manrope uppercase tracking-widest text-outline mt-1">New York, USA / 2024</p>
+<p class="text-xs manrope uppercase tracking-widest text-outline dark:text-neutral-500 dark:text-neutral-500 mt-1">New York, USA / 2024</p>
 </div>
 </div>
 <!-- Final Large Item -->
@@ -200,15 +200,15 @@
 <div class="mt-6 flex justify-between items-start">
 <div>
 <h3 class="newsreader text-2xl">Shadow Museum</h3>
-<p class="text-xs manrope uppercase tracking-widest text-outline mt-1">Oslo, Norway / 2021</p>
+<p class="text-xs manrope uppercase tracking-widest text-outline dark:text-neutral-500 dark:text-neutral-500 mt-1">Oslo, Norway / 2021</p>
 </div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="north_east">north_east</span>
+<span class="material-symbols-outlined text-outline dark:text-neutral-500 dark:text-neutral-500 group-hover:text-primary dark:text-white transition-colors" data-icon="north_east">north_east</span>
 </div>
 </div>
 </div>
 </section>
 <!-- Recognition Ticker/List -->
-<section class="py-24 px-4 md:px-24 bg-surface-container-highest dark:bg-neutral-800">
+<section class="py-24 px-8 md:px-24 bg-surface-container dark:bg-neutral-800 dark:bg-neutral-800-highest dark:bg-neutral-800">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 items-center">
 <div class="md:col-span-1">
 <h2 class="manrope font-bold text-xs uppercase tracking-[0.5em]">Distinctions</h2>
@@ -222,10 +222,10 @@
 </div>
 </section>
 <!-- Newsletter / Contact Tease -->
-<section class="py-32 px-4 md:px-24 text-center">
+<section class="py-32 px-8 md:px-24 text-center">
 <div class="max-w-2xl mx-auto">
 <h2 class="newsreader text-5xl md:text-6xl mb-8">Build for Permanence.</h2>
-<p class="manrope text-sm text-secondary uppercase tracking-widest mb-12">Begin a dialogue about your next structural monument.</p>
+<p class="manrope text-sm text-secondary dark:text-neutral-400 uppercase tracking-widest mb-12">Begin a dialogue about your next structural monument.</p>
 <div class="flex flex-col md:flex-row gap-0">
 <input class="flex-grow bg-transparent border-b-2 border-outline-variant p-4 manrope text-xs tracking-widest focus:outline-none focus:border-primary transition-colors" placeholder="YOUR EMAIL ADDRESS" type="email"/>
 <button class="bg-primary text-on-primary px-12 py-4 manrope text-xs tracking-[0.3em] uppercase hover:bg-primary-container transition-colors">Contact</button>
@@ -234,15 +234,15 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="w-full py-20 mt-32 bg-black text-white px-4 md:px-24 flex flex-col md:flex-row justify-between items-center gap-8">
+<footer class="w-full py-20 mt-32 bg-black text-white px-8 md:px-24 flex flex-col md:flex-row justify-between items-center gap-8">
 <div class="font-sans text-[0.75rem] uppercase tracking-widest manrope text-neutral-400">
             © 2024 Architectural Monolith. Built for Permanence.
         </div>
 <div class="flex gap-12">
-<a class="font-sans text-[0.75rem] uppercase tracking-widest manrope text-neutral-400 hover:text-white transition-colors underline underline-offset-4" href="projects.html">Instagram</a>
-<a class="font-sans text-[0.75rem] uppercase tracking-widest manrope text-neutral-400 hover:text-white transition-colors" href="projects.html">LinkedIn</a>
-<a class="font-sans text-[0.75rem] uppercase tracking-widest manrope text-neutral-400 hover:text-white transition-colors" href="projects.html">Journal</a>
-<a class="font-sans text-[0.75rem] uppercase tracking-widest manrope text-neutral-400 hover:text-white transition-colors" href="projects.html">Privacy</a>
+<a class="font-sans text-[0.75rem] uppercase tracking-widest manrope text-neutral-400 hover:text-white transition-colors underline underline-offset-4" href="#">Instagram</a>
+<a class="font-sans text-[0.75rem] uppercase tracking-widest manrope text-neutral-400 hover:text-white transition-colors" href="#">LinkedIn</a>
+<a class="font-sans text-[0.75rem] uppercase tracking-widest manrope text-neutral-400 hover:text-white transition-colors" href="#">Journal</a>
+<a class="font-sans text-[0.75rem] uppercase tracking-widest manrope text-neutral-400 hover:text-white transition-colors" href="#">Privacy</a>
 </div>
 </footer>
 <script src="theme-toggle.js"></script>
